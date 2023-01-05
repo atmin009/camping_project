@@ -1,0 +1,37 @@
+{
+    "booking": [
+      {
+        "id": 1,
+        "name": "โอม",
+        "number": "5",
+        "phone_number": "0936641772",
+        "date": "02/06/2565",
+        "check_in": "06/06/2565",
+        "check_out": "08/06/2565",
+        "price": 500,
+        "status": "ชําระเงินแล้ว"
+      },
+      {
+        "name": "มิน",
+        "number": "8",
+        "phone_number": "098xxxxxxx",
+        "date": "02/07/2565",
+        "check_in": "06/06/2565",
+        "check_out": "08/06/2565",
+        "price": "500",
+        "status": "ชําระเงินแล้ว",
+        "id": 2
+      },
+      {
+        "name": "บอล",
+        "number": "9",
+        "phone_number": "021xxxxxxx",
+        "date": "08/02/2565",
+        "check_in": "09/02/2565",
+        "check_out": "10/02/2565",
+        "price": "500",
+        "status": "ชำระเงินเเล้ว",
+        "id": 3
+      }
+    ]
+  }
