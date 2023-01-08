@@ -12,6 +12,12 @@ https://youtu.be/mgn7G3ssix4
        <th>Example</th>
 
   </tr>
+    <tr>
+    <td>id</td>
+    <td>ไอดีรายการเพื่ออ้างอิง</td>
+    <td>int</td>
+    <td>1</td>
+  </tr>
   <tr>
     <td>f_name</td>
     <td>ชื่อลูกค้า</td>
