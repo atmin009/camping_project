@@ -80,3 +80,42 @@ https://youtu.be/mgn7G3ssix4
   </tr>
 </table>
 <h2>contact</h2>
+<table>
+  <tr>
+    <th>Attribute</th>
+    <th>Description</th>
+    <th>Datatype</th>
+       <th>Example</th>
+
+  </tr>
+  <tr>
+    <td>id</td>
+    <td>ไอดีรายการเพื่ออ้างอิง</td>
+    <td>int</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>f_name</td>
+    <td>ชื่อลูกค้า</td>
+    <td>string</td>
+    <td>ศุภณัฐ</td>
+  </tr>
+  <tr>
+    <td>l_name</td>
+    <td>นามสกุลลูกค้า</td>
+    <td>string</td>
+    <td>ขุนนุ้ย</td>
+  </tr>
+     <tr>
+    <td>phone_number</td>
+    <td>เบอร์โรศัพท์</td>
+    <td>int</td>
+    <td>09745632145</td>
+  </tr>
+       <tr>
+    <td>text</td>
+    <td>ข้อความที่ต้องการส่ง</td>
+    <td>string</td>
+    <td>ทดสอบการส่งข้อความ</td>
+  </tr>
+</table>
