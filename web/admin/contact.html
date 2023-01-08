@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ภ.สำเภา แคมป์ปิ้ง สุราษฎร์ธานี </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="/web/assets/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
+
+    <script>
+        $(document).ready(function () {
+            const url = "http://localhost:3000/contact";
+            $.ajax({
+                url: url,
+                type: "GET",
+                success: function (res) {
+                    var table = $("#tblData");
+                    for (var i = 0; i < res.length; i++) {
+                        var row = $("<tr>");
+                        var cell1 = $("<td>").text(res[i].id);
+                        var cell2 = $("<td>").text(res[i].f_name);
+                        var cell3 = $("<td>").text(res[i].l_name);
+                        var cell4 = $("<td>").text(res[i].phone_number);
+                        var cell5 = $("<td>").text(res[i].text);
+                        row.append(cell1, cell2, cell3, cell4, cell5);
+                        table.append(row);
+                    }
+                }
+            });
+        });
+    </script>
+
+
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg" style="background-color: rgb(0, 48, 4);">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><img src="/web/assets/img/navbar-logo.png"
+                    class="img-fluid img-logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-menu">
+                    <li class="nav-item">
+                        <a class="nav-link active" style="color: aliceblue;" aria-current="page"
+                            href="index2.html">ข้อมูลการจอง</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" style="color: aliceblue;" aria-current="page"
+                            href="booking.html">เพิ่มข้อมูลการจอง</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" style="color: aliceblue;" aria-current="page"
+                            href="contact.html">กล่องข้อความ</a>
+                    </li>
+                    <a href="/web/index.html"><button class="btn btn-warning text-menu" style="color: black;" type="submit">ออกจากระบบ</button></a>
+
+
+            </div>
+        </div>
+    </nav>
+<div>
+    <div class="row pt-5">
+        <div class="col-12">
+            <h3 class="text-uppercase border-bottom mb-4 text-packet-header">กล่องข้อความจากหน้าเว็บไซต์</h3>
+        </div>
+    </div>
+    <div class="container">
+        <div class="container mt-5 pt-1 mb-5" style="width: 1500px;">
+            <span id="id"></span>
+            <input type="hidden" id="id" />
+            <table class="table table table-striped p1">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>ชื่อ</th>
+                        <th>นามสกุล</th>
+                        <th>เบอร์โทรศัพท์</th>
+                        <th>ข้อความ</th>
+                    </tr>
+                </thead>
+                <tbody id="tblData"></tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+    <footer class="footer text-footer">
+        <div class="container">
+            <div>
+                <center>
+                    <button type="button" class="btn btn-info btn-sm" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal">สภาพอากาศ</button>
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel" style="color: black;">
+                                        สภาพอากาศประจำวัน</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div id="m-booked-bl-simple-week-vertical-68387">
+                                        <div class="booked-wzs-160-275 weather-customize"
+                                            style="background-color:#137AE9; width:184px;" id="width2 ">
+                                            <div class="booked-wzs-160-275_in">
+                                                <div class="booked-wzs-160-275-data">
+                                                    <div class="booked-wzs-160-275-left-img wrz-18"></div>
+                                                    <div class="booked-wzs-160-275-right">
+                                                        <div class="booked-wzs-day-deck">
+                                                            <div class="booked-wzs-day-val">
+                                                                <div class="booked-wzs-day-number"><span
+                                                                        class="plus">+</span>26</div>
+                                                                <div class="booked-wzs-day-dergee">
+                                                                    <div class="booked-wzs-day-dergee-val">&deg;</div>
+                                                                    <div class="booked-wzs-day-dergee-name">C</div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="booked-wzs-day">
+                                                                <div class="booked-wzs-day-d"><span
+                                                                        class="plus">+</span>26&deg;</div>
+                                                                <div class="booked-wzs-day-n"><span
+                                                                        class="plus">+</span>24&deg;</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="booked-wzs-160-275-info">
+                                                            <div class="booked-wzs-160-275-city smolest">สุราษฎร์ธานี
+                                                            </div>
+                                                            <div class="booked-wzs-160-275-date">, 07</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <table cellpadding="0" cellspacing="0" class="booked-wzs-table-160">
+                                                    <tr>
+                                                        <td class="week-day"> <span class="week-day-txt"></span></td>
+                                                        <td class="week-day-ico">
+                                                            <div class="wrz-sml wrzs-18"></div>
+                                                        </td>
+                                                        <td class="week-day-val"><span class="plus">+</span>27&deg;</td>
+                                                        <td class="week-day-val"><span class="plus">+</span>23&deg;</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="week-day"> <span class="week-day-txt"></span></td>
+                                                        <td class="week-day-ico">
+                                                            <div class="wrz-sml wrzs-03"></div>
+                                                        </td>
+                                                        <td class="week-day-val"><span class="plus">+</span>28&deg;</td>
+                                                        <td class="week-day-val"><span class="plus">+</span>23&deg;</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="week-day"> <span class="week-day-txt"></span></td>
+                                                        <td class="week-day-ico">
+                                                            <div class="wrz-sml wrzs-18"></div>
+                                                        </td>
+                                                        <td class="week-day-val"><span class="plus">+</span>28&deg;</td>
+                                                        <td class="week-day-val"><span class="plus">+</span>23&deg;</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="week-day"> <span class="week-day-txt"></span></td>
+                                                        <td class="week-day-ico">
+                                                            <div class="wrz-sml wrzs-18"></div>
+                                                        </td>
+                                                        <td class="week-day-val"><span class="plus">+</span>28&deg;</td>
+                                                        <td class="week-day-val"><span class="plus">+</span>23&deg;</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="week-day"> <span class="week-day-txt"></span></td>
+                                                        <td class="week-day-ico">
+                                                            <div class="wrz-sml wrzs-18"></div>
+                                                        </td>
+                                                        <td class="week-day-val"><span class="plus">+</span>28&deg;</td>
+                                                        <td class="week-day-val"><span class="plus">+</span>23&deg;</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="week-day"> <span class="week-day-txt"></span></td>
+                                                        <td class="week-day-ico">
+                                                            <div class="wrz-sml wrzs-18"></div>
+                                                        </td>
+                                                        <td class="week-day-val"><span class="plus">+</span>28&deg;</td>
+                                                        <td class="week-day-val"><span class="plus">+</span>23&deg;</td>
+                                                    </tr>
+                                                </table>
+                                                <div class="booked-wzs-center"> <span
+                                                        class="booked-wzs-bottom-l">ดูพยากรณ์ใน 7 วัน</span> </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <script
+                                        type="text/javascript"> var css_file = document.createElement("link"); var widgetUrl = location.href; css_file.setAttribute("rel", "stylesheet"); css_file.setAttribute("type", "text/css"); css_file.setAttribute("href", 'https://s.bookcdn.com/css/w/booked-wzs-widget-160x275.css?v=0.0.1'); document.getElementsByTagName("head")[0].appendChild(css_file); function setWidgetData_68387(data) { if (typeof (data) != 'undefined' && data.results.length > 0) { for (var i = 0; i < data.results.length; ++i) { var objMainBlock = document.getElementById('m-booked-bl-simple-week-vertical-68387'); if (objMainBlock !== null) { var copyBlock = document.getElementById('m-bookew-weather-copy-' + data.results[i].widget_type); objMainBlock.innerHTML = data.results[i].html_code; if (copyBlock !== null) objMainBlock.appendChild(copyBlock); } } } else { alert('data=undefined||data.results is empty'); } } var widgetSrc = "https://widgets.booked.net/weather/info?action=get_weather_info;ver=7;cityID=19061;type=4;scode=29337;ltid=3457;domid=1171;anc_id=66370;countday=undefined;cmetric=1;wlangID=30;color=137AE9;wwidth=184;header_color=ffffff;text_color=333333;link_color=08488D;border_form=1;footer_color=ffffff;footer_text_color=333333;transparent=0;v=0.0.1"; widgetSrc += ';ref=' + widgetUrl; widgetSrc += ';rand_id=68387'; var weatherBookedScript = document.createElement("script"); weatherBookedScript.setAttribute("type", "text/javascript"); weatherBookedScript.src = widgetSrc; document.body.appendChild(weatherBookedScript) </script>
+                                    <!-- weather widget end -->
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            </center>
+            <div class="copyright">
+                &copy; Copyright <strong><span>ภ.สำเภา แคมป์ปิ้ง สุราษฎร์ธานี</span></strong>. All Rights Reserved
+            </div>
+            <div class="credits">
+                Designed by <a href="makeby.html">คลิกที่นี่</a>
+            </div>
+        </div>
+
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    <script src="/web/assets/main.js"></script>
+</body>
+
+</html>

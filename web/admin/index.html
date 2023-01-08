@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>เข้าสู่ระบบ</title>
+	<link rel="stylesheet" href="/web/assets/style.css">
+	<link rel="stylesheet" href="/web/assets/main.css">
+	
+
+</head>
+<body style="background-color: rgb(0, 0, 0);">
+	<div class="container p1">
+		<h1 class="label">Login Admin</h1>
+		<form class="login_form" action="/web/admin/index2.html" method="post" name="form" onsubmit="return validated()">
+			<div class="font">ชื่อผู้ใช้</div>
+			<input autocomplete="off" type="text" name="email">
+			<div id="email_error">โปรดระบุชื่อผู้ใช้</div>
+			<div class="font font2">รหัสผ่าน</div>
+			<input type="password" name="password">
+			<div id="pass_error">โปรดระบุรหัสผ่าน</div>
+			<button type="submit"  class="btn btn-primary"><a href="/web/admin/index2.html" style="color: aliceblue;" class="p1">เข้าสู่ระบบ</a></button>
+		</form>
+	</div>	
+</body>
+</html>
